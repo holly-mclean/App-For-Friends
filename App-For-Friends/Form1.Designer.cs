@@ -43,13 +43,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.d4display = new System.Windows.Forms.Label();
+            this.d6display = new System.Windows.Forms.Label();
+            this.d8display = new System.Windows.Forms.Label();
+            this.d10display = new System.Windows.Forms.Label();
+            this.d12display = new System.Windows.Forms.Label();
+            this.d20display = new System.Windows.Forms.Label();
+            this.dPercentDisplay = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -213,87 +213,87 @@
             // 
             this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.flowLayoutPanel2.AutoSize = true;
-            this.flowLayoutPanel2.Controls.Add(this.label2);
-            this.flowLayoutPanel2.Controls.Add(this.label3);
-            this.flowLayoutPanel2.Controls.Add(this.label4);
-            this.flowLayoutPanel2.Controls.Add(this.label5);
-            this.flowLayoutPanel2.Controls.Add(this.label6);
-            this.flowLayoutPanel2.Controls.Add(this.label7);
-            this.flowLayoutPanel2.Controls.Add(this.label8);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(109, 139);
+            this.flowLayoutPanel2.Controls.Add(this.d4display);
+            this.flowLayoutPanel2.Controls.Add(this.d6display);
+            this.flowLayoutPanel2.Controls.Add(this.d8display);
+            this.flowLayoutPanel2.Controls.Add(this.d10display);
+            this.flowLayoutPanel2.Controls.Add(this.d12display);
+            this.flowLayoutPanel2.Controls.Add(this.d20display);
+            this.flowLayoutPanel2.Controls.Add(this.dPercentDisplay);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(113, 139);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(567, 42);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(559, 42);
             this.flowLayoutPanel2.TabIndex = 2;
             // 
-            // label2
+            // d4display
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
-            this.label2.Size = new System.Drawing.Size(75, 23);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "label2";
+            this.d4display.AutoSize = true;
+            this.d4display.Location = new System.Drawing.Point(3, 0);
+            this.d4display.Name = "d4display";
+            this.d4display.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            this.d4display.Size = new System.Drawing.Size(71, 23);
+            this.d4display.TabIndex = 0;
+            this.d4display.Text = "__d4";
             // 
-            // label3
+            // d6display
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(84, 0);
-            this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
-            this.label3.Size = new System.Drawing.Size(75, 23);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "label3";
+            this.d6display.AutoSize = true;
+            this.d6display.Location = new System.Drawing.Point(80, 0);
+            this.d6display.Name = "d6display";
+            this.d6display.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            this.d6display.Size = new System.Drawing.Size(71, 23);
+            this.d6display.TabIndex = 1;
+            this.d6display.Text = "__d6";
             // 
-            // label4
+            // d8display
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(165, 0);
-            this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
-            this.label4.Size = new System.Drawing.Size(75, 23);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "label4";
+            this.d8display.AutoSize = true;
+            this.d8display.Location = new System.Drawing.Point(157, 0);
+            this.d8display.Name = "d8display";
+            this.d8display.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            this.d8display.Size = new System.Drawing.Size(71, 23);
+            this.d8display.TabIndex = 2;
+            this.d8display.Text = "__d8";
             // 
-            // label5
+            // d10display
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(246, 0);
-            this.label5.Name = "label5";
-            this.label5.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
-            this.label5.Size = new System.Drawing.Size(75, 23);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "label5";
+            this.d10display.AutoSize = true;
+            this.d10display.Location = new System.Drawing.Point(234, 0);
+            this.d10display.Name = "d10display";
+            this.d10display.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            this.d10display.Size = new System.Drawing.Size(77, 23);
+            this.d10display.TabIndex = 3;
+            this.d10display.Text = "__d10";
             // 
-            // label6
+            // d12display
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(327, 0);
-            this.label6.Name = "label6";
-            this.label6.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
-            this.label6.Size = new System.Drawing.Size(75, 23);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "label6";
+            this.d12display.AutoSize = true;
+            this.d12display.Location = new System.Drawing.Point(317, 0);
+            this.d12display.Name = "d12display";
+            this.d12display.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            this.d12display.Size = new System.Drawing.Size(77, 23);
+            this.d12display.TabIndex = 4;
+            this.d12display.Text = "__d12";
             // 
-            // label7
+            // d20display
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(408, 0);
-            this.label7.Name = "label7";
-            this.label7.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
-            this.label7.Size = new System.Drawing.Size(75, 23);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "label7";
+            this.d20display.AutoSize = true;
+            this.d20display.Location = new System.Drawing.Point(400, 0);
+            this.d20display.Name = "d20display";
+            this.d20display.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            this.d20display.Size = new System.Drawing.Size(77, 23);
+            this.d20display.TabIndex = 5;
+            this.d20display.Text = "__d20";
             // 
-            // label8
+            // dPercentDisplay
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(489, 0);
-            this.label8.Name = "label8";
-            this.label8.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
-            this.label8.Size = new System.Drawing.Size(75, 23);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "label8";
+            this.dPercentDisplay.AutoSize = true;
+            this.dPercentDisplay.Location = new System.Drawing.Point(483, 0);
+            this.dPercentDisplay.Name = "dPercentDisplay";
+            this.dPercentDisplay.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            this.dPercentDisplay.Size = new System.Drawing.Size(73, 23);
+            this.dPercentDisplay.TabIndex = 6;
+            this.dPercentDisplay.Text = "__d%";
             // 
             // Form1
             // 
@@ -332,13 +332,13 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label d4display;
+        private System.Windows.Forms.Label d6display;
+        private System.Windows.Forms.Label d8display;
+        private System.Windows.Forms.Label d10display;
+        private System.Windows.Forms.Label d12display;
+        private System.Windows.Forms.Label d20display;
+        private System.Windows.Forms.Label dPercentDisplay;
     }
 }
 
