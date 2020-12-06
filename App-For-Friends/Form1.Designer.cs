@@ -51,11 +51,16 @@
             this.d20display = new System.Windows.Forms.Label();
             this.dPercentDisplay = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.totalDisplay = new System.Windows.Forms.Label();
+            this.sumDisplay = new System.Windows.Forms.Label();
+            this.clearButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -100,6 +105,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel3, 0, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -311,6 +317,51 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "All rolls: ";
             // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.flowLayoutPanel3.AutoSize = true;
+            this.flowLayoutPanel3.Controls.Add(this.totalDisplay);
+            this.flowLayoutPanel3.Controls.Add(this.sumDisplay);
+            this.flowLayoutPanel3.Controls.Add(this.clearButton);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(186, 304);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(413, 111);
+            this.flowLayoutPanel3.TabIndex = 4;
+            // 
+            // totalDisplay
+            // 
+            this.totalDisplay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.totalDisplay.AutoSize = true;
+            this.totalDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalDisplay.Location = new System.Drawing.Point(3, 0);
+            this.totalDisplay.Name = "totalDisplay";
+            this.totalDisplay.Size = new System.Drawing.Size(107, 47);
+            this.totalDisplay.TabIndex = 0;
+            this.totalDisplay.Text = "Total: ";
+            // 
+            // sumDisplay
+            // 
+            this.sumDisplay.AutoSize = true;
+            this.sumDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sumDisplay.Location = new System.Drawing.Point(116, 0);
+            this.sumDisplay.Name = "sumDisplay";
+            this.sumDisplay.Size = new System.Drawing.Size(26, 37);
+            this.sumDisplay.TabIndex = 1;
+            this.sumDisplay.Text = " ";
+            // 
+            // clearButton
+            // 
+            this.clearButton.AutoSize = true;
+            this.clearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearButton.Location = new System.Drawing.Point(295, 3);
+            this.clearButton.Margin = new System.Windows.Forms.Padding(150, 3, 3, 3);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(115, 41);
+            this.clearButton.TabIndex = 2;
+            this.clearButton.Text = "Clear";
+            this.clearButton.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -327,6 +378,8 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.flowLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -356,6 +409,10 @@
         private System.Windows.Forms.Label d20display;
         private System.Windows.Forms.Label dPercentDisplay;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.Label totalDisplay;
+        private System.Windows.Forms.Label sumDisplay;
+        private System.Windows.Forms.Button clearButton;
     }
 }
 
