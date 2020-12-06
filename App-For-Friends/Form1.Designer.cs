@@ -50,6 +50,7 @@
             this.d12display = new System.Windows.Forms.Label();
             this.d20display = new System.Windows.Forms.Label();
             this.dPercentDisplay = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -98,6 +99,7 @@
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -128,12 +130,13 @@
             // 
             // d4button
             // 
+            this.d4button.BackColor = System.Drawing.Color.Transparent;
             this.d4button.Location = new System.Drawing.Point(3, 3);
             this.d4button.Name = "d4button";
             this.d4button.Size = new System.Drawing.Size(75, 23);
             this.d4button.TabIndex = 0;
             this.d4button.Text = "d4";
-            this.d4button.UseVisualStyleBackColor = true;
+            this.d4button.UseVisualStyleBackColor = false;
             // 
             // d6button
             // 
@@ -295,6 +298,19 @@
             this.dPercentDisplay.TabIndex = 6;
             this.dPercentDisplay.Text = "__d%";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Location = new System.Drawing.Point(115, 184);
+            this.label2.Margin = new System.Windows.Forms.Padding(115, 0, 115, 0);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(15);
+            this.label2.Size = new System.Drawing.Size(556, 117);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "All rolls: ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,6 +355,7 @@
         private System.Windows.Forms.Label d12display;
         private System.Windows.Forms.Label d20display;
         private System.Windows.Forms.Label dPercentDisplay;
+        private System.Windows.Forms.Label label2;
     }
 }
 
