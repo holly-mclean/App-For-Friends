@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.RollDiceTab = new System.Windows.Forms.TabPage();
+            this.CharGenTab = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.d4button = new System.Windows.Forms.Button();
@@ -41,7 +41,7 @@
             this.d20button = new System.Windows.Forms.Button();
             this.dPercentButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.MysteryTab = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.d4display = new System.Windows.Forms.Label();
             this.d6display = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
             this.sumDisplay = new System.Windows.Forms.Label();
             this.clearButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.RollDiceTab.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -65,9 +65,9 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.RollDiceTab);
+            this.tabControl1.Controls.Add(this.CharGenTab);
+            this.tabControl1.Controls.Add(this.MysteryTab);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -75,26 +75,26 @@
             this.tabControl1.Size = new System.Drawing.Size(800, 450);
             this.tabControl1.TabIndex = 0;
             // 
-            // tabPage1
+            // RollDiceTab
             // 
-            this.tabPage1.Controls.Add(this.tableLayoutPanel1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(792, 424);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.RollDiceTab.Controls.Add(this.tableLayoutPanel1);
+            this.RollDiceTab.Location = new System.Drawing.Point(4, 22);
+            this.RollDiceTab.Name = "RollDiceTab";
+            this.RollDiceTab.Padding = new System.Windows.Forms.Padding(3);
+            this.RollDiceTab.Size = new System.Drawing.Size(792, 424);
+            this.RollDiceTab.TabIndex = 0;
+            this.RollDiceTab.Text = "Roll Dice";
+            this.RollDiceTab.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // CharGenTab
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(792, 424);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.CharGenTab.Location = new System.Drawing.Point(4, 22);
+            this.CharGenTab.Name = "CharGenTab";
+            this.CharGenTab.Padding = new System.Windows.Forms.Padding(3);
+            this.CharGenTab.Size = new System.Drawing.Size(792, 424);
+            this.CharGenTab.TabIndex = 1;
+            this.CharGenTab.Text = "Character Idea Generator";
+            this.CharGenTab.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel1
             // 
@@ -209,14 +209,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Roll some die!";
             // 
-            // tabPage3
+            // MysteryTab
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(792, 424);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.MysteryTab.Location = new System.Drawing.Point(4, 22);
+            this.MysteryTab.Name = "MysteryTab";
+            this.MysteryTab.Size = new System.Drawing.Size(792, 424);
+            this.MysteryTab.TabIndex = 2;
+            this.MysteryTab.Text = "Mystery Message";
+            this.MysteryTab.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel2
             // 
@@ -371,8 +371,8 @@
             this.Name = "Form1";
             this.Text = "An App for D&D Friends";
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.RollDiceTab.ResumeLayout(false);
+            this.RollDiceTab.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -387,7 +387,7 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage RollDiceTab;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button d4button;
@@ -398,8 +398,8 @@
         private System.Windows.Forms.Button d20button;
         private System.Windows.Forms.Button dPercentButton;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage CharGenTab;
+        private System.Windows.Forms.TabPage MysteryTab;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label d4display;
         private System.Windows.Forms.Label d6display;
