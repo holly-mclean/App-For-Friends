@@ -132,6 +132,30 @@ namespace App_For_Friends
             string allRollsDisplay = newRoll + " + ";
             allRollsLabel.Text += allRollsDisplay;
         }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            NumContainer.Sum = 0;
+            NumContainer.DFourRolled = 0;
+            NumContainer.DSixRolled = 0;
+            NumContainer.DEightRolled = 0;
+            NumContainer.DTenRolled = 0;
+            NumContainer.DTwelveRolled = 0;
+            NumContainer.DTwentyRolled = 0;
+            NumContainer.DPercentileRolled = 0;
+
+            d4display.Text = "__d4";
+            d6display.Text = "__d6";
+            d8display.Text = "__d8";
+            d10display.Text = "__d10";
+            d12display.Text = "__d12";
+            d20display.Text = "__d20";
+            dPercentDisplay.Text = "__d%";
+
+            allRollsLabel.Text = "All rolls: ";
+
+            sumDisplay.Text = "0";
+        }
     }
 
     public class NumberContainer
