@@ -27,11 +27,134 @@ namespace App_For_Friends
             string newDisplay = NumContainer.DFourRolled + "d4";
             d4display.Text = newDisplay;
 
-            int newRoll = NumContainer.RollDFour();
+            int newRoll = NumContainer.RollDice(4);
             int currentSum = NumContainer.Sum;
             int newSum = newRoll + currentSum;
             NumContainer.Sum = newSum;
             sumDisplay.Text = newSum.ToString();
+
+            string allRollsDisplay = newRoll + " + ";
+            allRollsLabel.Text += allRollsDisplay;
+        }
+
+        private void d6button_Click(object sender, EventArgs e)
+        {
+            NumContainer.DSixRolled += 1;
+            string newDisplay = NumContainer.DSixRolled + "d6";
+            d6display.Text = newDisplay;
+
+            int newRoll = NumContainer.RollDice(6);
+            int currentSum = NumContainer.Sum;
+            int newSum = newRoll + currentSum;
+            NumContainer.Sum = newSum;
+            sumDisplay.Text = newSum.ToString();
+
+            string allRollsDisplay = newRoll + " + ";
+            allRollsLabel.Text += allRollsDisplay;
+        }
+
+        private void d8button_Click(object sender, EventArgs e)
+        {
+            NumContainer.DEightRolled += 1;
+            string newDisplay = NumContainer.DEightRolled + "d8";
+            d8display.Text = newDisplay;
+
+            int newRoll = NumContainer.RollDice(8);
+            int currentSum = NumContainer.Sum;
+            int newSum = newRoll + currentSum;
+            NumContainer.Sum = newSum;
+            sumDisplay.Text = newSum.ToString();
+
+            string allRollsDisplay = newRoll + " + ";
+            allRollsLabel.Text += allRollsDisplay;
+        }
+
+        private void d10button_Click(object sender, EventArgs e)
+        {
+            NumContainer.DTenRolled += 1;
+            string newDisplay = NumContainer.DTenRolled + "d10";
+            d10display.Text = newDisplay;
+
+            int newRoll = NumContainer.RollDice(10);
+            int currentSum = NumContainer.Sum;
+            int newSum = newRoll + currentSum;
+            NumContainer.Sum = newSum;
+            sumDisplay.Text = newSum.ToString();
+
+            string allRollsDisplay = newRoll + " + ";
+            allRollsLabel.Text += allRollsDisplay;
+        }
+
+        private void d12button_Click(object sender, EventArgs e)
+        {
+            NumContainer.DTwelveRolled += 1;
+            string newDisplay = NumContainer.DTwelveRolled + "d12";
+            d12display.Text = newDisplay;
+
+            int newRoll = NumContainer.RollDice(12);
+            int currentSum = NumContainer.Sum;
+            int newSum = newRoll + currentSum;
+            NumContainer.Sum = newSum;
+            sumDisplay.Text = newSum.ToString();
+
+            string allRollsDisplay = newRoll + " + ";
+            allRollsLabel.Text += allRollsDisplay;
+        }
+
+        private void d20button_Click(object sender, EventArgs e)
+        {
+            NumContainer.DTwentyRolled += 1;
+            string newDisplay = NumContainer.DTwentyRolled + "d20";
+            d20display.Text = newDisplay;
+
+            int newRoll = NumContainer.RollDice(20);
+            int currentSum = NumContainer.Sum;
+            int newSum = newRoll + currentSum;
+            NumContainer.Sum = newSum;
+            sumDisplay.Text = newSum.ToString();
+
+            string allRollsDisplay = newRoll + " + ";
+            allRollsLabel.Text += allRollsDisplay;
+        }
+
+        private void dPercentButton_Click(object sender, EventArgs e)
+        {
+            NumContainer.DPercentileRolled += 1;
+            string newDisplay = NumContainer.DPercentileRolled + "d%";
+            dPercentDisplay.Text = newDisplay;
+
+            int newRoll = NumContainer.RollDice(100);
+            int currentSum = NumContainer.Sum;
+            int newSum = newRoll + currentSum;
+            NumContainer.Sum = newSum;
+            sumDisplay.Text = newSum.ToString();
+
+            string allRollsDisplay = newRoll + " + ";
+            allRollsLabel.Text += allRollsDisplay;
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            NumContainer.Sum = 0;
+            NumContainer.DFourRolled = 0;
+            NumContainer.DSixRolled = 0;
+            NumContainer.DEightRolled = 0;
+            NumContainer.DTenRolled = 0;
+            NumContainer.DTwelveRolled = 0;
+            NumContainer.DTwentyRolled = 0;
+            NumContainer.DPercentileRolled = 0;
+
+            d4display.Text = "__d4";
+            d6display.Text = "__d6";
+            d8display.Text = "__d8";
+            d10display.Text = "__d10";
+            d12display.Text = "__d12";
+            d20display.Text = "__d20";
+            dPercentDisplay.Text = "__d%";
+
+            allRollsLabel.Text = "All rolls: ";
+
+            sumDisplay.Text = "0";
         }
     }
 
@@ -47,11 +170,21 @@ namespace App_For_Friends
         public int DTwentyRolled { get; set; }
         public int DPercentileRolled { get; set; }
 
-        public int RollDFour()
+        public int RollDice(int diceType)
         {
-            int num = rand.Next(1, 5);
+            int num = rand.Next(1, (diceType + 1));
             return num;
         }
 
+        //public void UpdateSum(int newRoll)
+        //{
+        //    int currentSum = Sum;
+        //    int newSum = newRoll + currentSum;
+        //    Sum = newSum;
+        //    sumDisplay.Text = newSum.ToString();
+
+        //    string allRollsDisplay = newRoll + " + ";
+        //    allRollsLabel.Text += allRollsDisplay;
+        //}
     }
 }

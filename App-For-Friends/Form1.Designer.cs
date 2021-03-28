@@ -48,7 +48,7 @@
             this.d12display = new System.Windows.Forms.Label();
             this.d20display = new System.Windows.Forms.Label();
             this.dPercentDisplay = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.allRollsLabel = new System.Windows.Forms.Label();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.totalDisplay = new System.Windows.Forms.Label();
             this.sumDisplay = new System.Windows.Forms.Label();
@@ -94,7 +94,7 @@
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.allRollsLabel, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel3, 0, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
@@ -143,6 +143,7 @@
             this.d6button.TabIndex = 1;
             this.d6button.Text = "d6";
             this.d6button.UseVisualStyleBackColor = true;
+            this.d6button.Click += new System.EventHandler(this.d6button_Click);
             // 
             // d8button
             // 
@@ -152,6 +153,7 @@
             this.d8button.TabIndex = 2;
             this.d8button.Text = "d8";
             this.d8button.UseVisualStyleBackColor = true;
+            this.d8button.Click += new System.EventHandler(this.d8button_Click);
             // 
             // d10button
             // 
@@ -161,6 +163,7 @@
             this.d10button.TabIndex = 3;
             this.d10button.Text = "d10";
             this.d10button.UseVisualStyleBackColor = true;
+            this.d10button.Click += new System.EventHandler(this.d10button_Click);
             // 
             // d12button
             // 
@@ -170,6 +173,7 @@
             this.d12button.TabIndex = 4;
             this.d12button.Text = "d12";
             this.d12button.UseVisualStyleBackColor = true;
+            this.d12button.Click += new System.EventHandler(this.d12button_Click);
             // 
             // d20button
             // 
@@ -179,6 +183,7 @@
             this.d20button.TabIndex = 5;
             this.d20button.Text = "d20";
             this.d20button.UseVisualStyleBackColor = true;
+            this.d20button.Click += new System.EventHandler(this.d20button_Click);
             // 
             // dPercentButton
             // 
@@ -188,6 +193,7 @@
             this.dPercentButton.TabIndex = 6;
             this.dPercentButton.Text = "d%";
             this.dPercentButton.UseVisualStyleBackColor = true;
+            this.dPercentButton.Click += new System.EventHandler(this.dPercentButton_Click);
             // 
             // label1
             // 
@@ -286,18 +292,17 @@
             this.dPercentDisplay.TabIndex = 6;
             this.dPercentDisplay.Text = "__d%";
             // 
-            // label2
+            // allRollsLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(115, 184);
-            this.label2.Margin = new System.Windows.Forms.Padding(115, 0, 115, 0);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(15);
-            this.label2.Size = new System.Drawing.Size(556, 117);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "All rolls: ";
+            this.allRollsLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.allRollsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.allRollsLabel.Location = new System.Drawing.Point(115, 184);
+            this.allRollsLabel.Margin = new System.Windows.Forms.Padding(115, 0, 115, 0);
+            this.allRollsLabel.Name = "allRollsLabel";
+            this.allRollsLabel.Padding = new System.Windows.Forms.Padding(15);
+            this.allRollsLabel.Size = new System.Drawing.Size(556, 117);
+            this.allRollsLabel.TabIndex = 3;
+            this.allRollsLabel.Text = "All rolls: ";
             // 
             // flowLayoutPanel3
             // 
@@ -346,6 +351,7 @@
             this.clearButton.TabIndex = 2;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // CharGenTab
             // 
@@ -412,7 +418,7 @@
         private System.Windows.Forms.Label d12display;
         private System.Windows.Forms.Label d20display;
         private System.Windows.Forms.Label dPercentDisplay;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label allRollsLabel;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Label totalDisplay;
         private System.Windows.Forms.Label sumDisplay;
