@@ -30,7 +30,6 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.RollDiceTab = new System.Windows.Forms.TabPage();
-            this.CharGenTab = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.d4button = new System.Windows.Forms.Button();
@@ -41,7 +40,6 @@
             this.d20button = new System.Windows.Forms.Button();
             this.dPercentButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.MysteryTab = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.d4display = new System.Windows.Forms.Label();
             this.d6display = new System.Windows.Forms.Label();
@@ -55,6 +53,8 @@
             this.totalDisplay = new System.Windows.Forms.Label();
             this.sumDisplay = new System.Windows.Forms.Label();
             this.clearButton = new System.Windows.Forms.Button();
+            this.CharGenTab = new System.Windows.Forms.TabPage();
+            this.MysteryTab = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.RollDiceTab.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -85,16 +85,6 @@
             this.RollDiceTab.TabIndex = 0;
             this.RollDiceTab.Text = "Roll Dice";
             this.RollDiceTab.UseVisualStyleBackColor = true;
-            // 
-            // CharGenTab
-            // 
-            this.CharGenTab.Location = new System.Drawing.Point(4, 22);
-            this.CharGenTab.Name = "CharGenTab";
-            this.CharGenTab.Padding = new System.Windows.Forms.Padding(3);
-            this.CharGenTab.Size = new System.Drawing.Size(792, 424);
-            this.CharGenTab.TabIndex = 1;
-            this.CharGenTab.Text = "Character Idea Generator";
-            this.CharGenTab.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel1
             // 
@@ -143,6 +133,7 @@
             this.d4button.TabIndex = 0;
             this.d4button.Text = "d4";
             this.d4button.UseVisualStyleBackColor = false;
+            this.d4button.Click += new System.EventHandler(this.d4button_Click);
             // 
             // d6button
             // 
@@ -208,15 +199,6 @@
             this.label1.Size = new System.Drawing.Size(199, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Roll some die!";
-            // 
-            // MysteryTab
-            // 
-            this.MysteryTab.Location = new System.Drawing.Point(4, 22);
-            this.MysteryTab.Name = "MysteryTab";
-            this.MysteryTab.Size = new System.Drawing.Size(792, 424);
-            this.MysteryTab.TabIndex = 2;
-            this.MysteryTab.Text = "Mystery Message";
-            this.MysteryTab.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel2
             // 
@@ -324,9 +306,9 @@
             this.flowLayoutPanel3.Controls.Add(this.totalDisplay);
             this.flowLayoutPanel3.Controls.Add(this.sumDisplay);
             this.flowLayoutPanel3.Controls.Add(this.clearButton);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(186, 304);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(177, 304);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(413, 111);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(431, 111);
             this.flowLayoutPanel3.TabIndex = 4;
             // 
             // totalDisplay
@@ -334,33 +316,55 @@
             this.totalDisplay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.totalDisplay.AutoSize = true;
             this.totalDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalDisplay.Location = new System.Drawing.Point(3, 0);
+            this.totalDisplay.Location = new System.Drawing.Point(3, 15);
+            this.totalDisplay.Margin = new System.Windows.Forms.Padding(3, 15, 3, 0);
             this.totalDisplay.Name = "totalDisplay";
-            this.totalDisplay.Size = new System.Drawing.Size(107, 47);
+            this.totalDisplay.Size = new System.Drawing.Size(107, 39);
             this.totalDisplay.TabIndex = 0;
             this.totalDisplay.Text = "Total: ";
             // 
             // sumDisplay
             // 
+            this.sumDisplay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.sumDisplay.AutoSize = true;
             this.sumDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sumDisplay.Location = new System.Drawing.Point(116, 0);
+            this.sumDisplay.Location = new System.Drawing.Point(116, 15);
+            this.sumDisplay.Margin = new System.Windows.Forms.Padding(3, 15, 3, 0);
             this.sumDisplay.Name = "sumDisplay";
-            this.sumDisplay.Size = new System.Drawing.Size(26, 37);
+            this.sumDisplay.Size = new System.Drawing.Size(44, 39);
             this.sumDisplay.TabIndex = 1;
-            this.sumDisplay.Text = " ";
+            this.sumDisplay.Text = " 0";
             // 
             // clearButton
             // 
             this.clearButton.AutoSize = true;
             this.clearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearButton.Location = new System.Drawing.Point(295, 3);
-            this.clearButton.Margin = new System.Windows.Forms.Padding(150, 3, 3, 3);
+            this.clearButton.Location = new System.Drawing.Point(313, 10);
+            this.clearButton.Margin = new System.Windows.Forms.Padding(150, 10, 3, 3);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(115, 41);
             this.clearButton.TabIndex = 2;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = true;
+            // 
+            // CharGenTab
+            // 
+            this.CharGenTab.Location = new System.Drawing.Point(4, 22);
+            this.CharGenTab.Name = "CharGenTab";
+            this.CharGenTab.Padding = new System.Windows.Forms.Padding(3);
+            this.CharGenTab.Size = new System.Drawing.Size(792, 424);
+            this.CharGenTab.TabIndex = 1;
+            this.CharGenTab.Text = "Character Idea Generator";
+            this.CharGenTab.UseVisualStyleBackColor = true;
+            // 
+            // MysteryTab
+            // 
+            this.MysteryTab.Location = new System.Drawing.Point(4, 22);
+            this.MysteryTab.Name = "MysteryTab";
+            this.MysteryTab.Size = new System.Drawing.Size(792, 424);
+            this.MysteryTab.TabIndex = 2;
+            this.MysteryTab.Text = "Mystery Message";
+            this.MysteryTab.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
