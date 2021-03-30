@@ -57,6 +57,7 @@
             this.MysteryTab = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.characterButton = new System.Windows.Forms.Button();
+            this.characterDisplay = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.RollDiceTab.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -383,6 +384,7 @@
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.characterButton, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.characterDisplay, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -402,6 +404,17 @@
             this.characterButton.TabIndex = 0;
             this.characterButton.Text = "Give me a character idea!";
             this.characterButton.UseVisualStyleBackColor = true;
+            // 
+            // characterDisplay
+            // 
+            this.characterDisplay.AutoSize = true;
+            this.characterDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.characterDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.characterDisplay.Location = new System.Drawing.Point(3, 139);
+            this.characterDisplay.Name = "characterDisplay";
+            this.characterDisplay.Size = new System.Drawing.Size(780, 279);
+            this.characterDisplay.TabIndex = 1;
+            this.characterDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -423,6 +436,7 @@
             this.flowLayoutPanel3.PerformLayout();
             this.CharGenTab.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -458,6 +472,7 @@
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button characterButton;
+        private System.Windows.Forms.Label characterDisplay;
     }
 }
 
