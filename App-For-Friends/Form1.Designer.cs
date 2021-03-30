@@ -55,20 +55,25 @@
             this.clearButton = new System.Windows.Forms.Button();
             this.CharGenTab = new System.Windows.Forms.TabPage();
             this.MysteryTab = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.characterButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.RollDiceTab.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
+            this.CharGenTab.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.tabControl1.Controls.Add(this.RollDiceTab);
             this.tabControl1.Controls.Add(this.CharGenTab);
             this.tabControl1.Controls.Add(this.MysteryTab);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -355,6 +360,7 @@
             // 
             // CharGenTab
             // 
+            this.CharGenTab.Controls.Add(this.tableLayoutPanel2);
             this.CharGenTab.Location = new System.Drawing.Point(4, 22);
             this.CharGenTab.Name = "CharGenTab";
             this.CharGenTab.Padding = new System.Windows.Forms.Padding(3);
@@ -371,6 +377,31 @@
             this.MysteryTab.TabIndex = 2;
             this.MysteryTab.Text = "Mystery Message";
             this.MysteryTab.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.characterButton, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.66666F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(786, 418);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // characterButton
+            // 
+            this.characterButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.characterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.characterButton.Location = new System.Drawing.Point(245, 27);
+            this.characterButton.Name = "characterButton";
+            this.characterButton.Size = new System.Drawing.Size(296, 85);
+            this.characterButton.TabIndex = 0;
+            this.characterButton.Text = "Give me a character idea!";
+            this.characterButton.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -390,6 +421,8 @@
             this.flowLayoutPanel2.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
+            this.CharGenTab.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -423,6 +456,8 @@
         private System.Windows.Forms.Label totalDisplay;
         private System.Windows.Forms.Label sumDisplay;
         private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Button characterButton;
     }
 }
 
