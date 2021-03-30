@@ -163,9 +163,6 @@ namespace App_For_Friends
         {
             // roll a random character and display on characterDisplay.Text
 
-            //string[] characterRace
-            //string[] characterClass
-
             Random rand = new Random();
 
             int raceIndex = rand.Next(characterRace.Length);
