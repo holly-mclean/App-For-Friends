@@ -166,7 +166,14 @@ namespace App_For_Friends
             //string[] characterRace
             //string[] characterClass
 
+            Random rand = new Random();
 
+            int raceIndex = rand.Next(characterRace.Length);
+            int classIndex = rand.Next(characterClass.Length);
+
+            string randomCharacter = characterRace[raceIndex] + " " + characterClass[classIndex];
+
+            characterDisplay.Text = randomCharacter;
         }
     }
 
