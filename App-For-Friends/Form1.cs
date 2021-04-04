@@ -15,7 +15,7 @@ namespace App_For_Friends
         public NumberContainer NumContainer { get; set; }
         public string[] characterRace = { "Dragonborn", "Dwarf", "Half-elf", "Elf", "Human", "Halfling", "Gnome", "Tiefling", "Half-orc" };
         public string[] characterClass = { "Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard" };
-        public string[] mysteryMessages = { "I've never beem strealing", "Just beanin'", "Sorry! We're not working today.", "My name is Wee Pee and I'm here to say, I love big ham in a major way." };
+        public string[] mysteryMessages = { "I've never beem strealing", "Just beanin'", "Sorry! We're not working today.", "I love you :)", "ooOO, ooOO!", "You've solved my Mystery Message puzzle...!", "All will be well...", "Helm wills it!", "Subtext: They did it.", "Donkey is life", "You just got Donna'd!!!!!!" };
         public Random rand;
 
         public Form1()
