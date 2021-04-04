@@ -1,5 +1,5 @@
 # App-For-Friends
-A practice C# and WinForms app for my D&D group
+A practice C# and WinForms app for my D&D group.
 
 ## Installation
 
