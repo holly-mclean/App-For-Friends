@@ -434,8 +434,8 @@
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.66666F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.5F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.5F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(792, 424);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
@@ -443,21 +443,23 @@
             // 
             this.mysteryMessageButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mysteryMessageButton.Font = new System.Drawing.Font("Segoe UI Emoji", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mysteryMessageButton.Location = new System.Drawing.Point(248, 28);
+            this.mysteryMessageButton.Location = new System.Drawing.Point(248, 37);
             this.mysteryMessageButton.Name = "mysteryMessageButton";
             this.mysteryMessageButton.Size = new System.Drawing.Size(296, 85);
             this.mysteryMessageButton.TabIndex = 0;
             this.mysteryMessageButton.Text = "Give me a message...";
             this.mysteryMessageButton.UseVisualStyleBackColor = true;
+            this.mysteryMessageButton.Click += new System.EventHandler(this.mysteryMessageButton_Click);
             // 
             // mysteryMessageDisplay
             // 
-            this.mysteryMessageDisplay.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mysteryMessageDisplay.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.mysteryMessageDisplay.AutoSize = true;
-            this.mysteryMessageDisplay.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mysteryMessageDisplay.Location = new System.Drawing.Point(396, 270);
+            this.mysteryMessageDisplay.Font = new System.Drawing.Font("Microsoft New Tai Lue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mysteryMessageDisplay.Location = new System.Drawing.Point(396, 159);
             this.mysteryMessageDisplay.Name = "mysteryMessageDisplay";
-            this.mysteryMessageDisplay.Size = new System.Drawing.Size(0, 25);
+            this.mysteryMessageDisplay.Padding = new System.Windows.Forms.Padding(0, 50, 0, 0);
+            this.mysteryMessageDisplay.Size = new System.Drawing.Size(0, 82);
             this.mysteryMessageDisplay.TabIndex = 1;
             // 
             // Form1
