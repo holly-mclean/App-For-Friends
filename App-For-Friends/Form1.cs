@@ -13,6 +13,8 @@ namespace App_For_Friends
     public partial class Form1 : Form
     {
         public NumberContainer NumContainer { get; set; }
+        public string[] characterRace = { "Dragonborn", "Dwarf", "Half-elf", "Elf", "Human", "Halfling", "Gnome", "Tiefling", "Half-orc" };
+        public string[] characterClass = { "Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard" };
 
         public Form1()
         {
@@ -155,6 +157,20 @@ namespace App_For_Friends
             allRollsLabel.Text = "All rolls: ";
 
             sumDisplay.Text = "0";
+        }
+
+        private void characterButton_Click(object sender, EventArgs e)
+        {
+            // roll a random character and display on characterDisplay.Text
+
+            Random rand = new Random();
+
+            int raceIndex = rand.Next(characterRace.Length);
+            int classIndex = rand.Next(characterClass.Length);
+
+            string randomCharacter = characterRace[raceIndex] + " " + characterClass[classIndex];
+
+            characterDisplay.Text = randomCharacter;
         }
     }
 

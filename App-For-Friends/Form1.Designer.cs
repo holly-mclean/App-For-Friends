@@ -54,9 +54,13 @@
             this.sumDisplay = new System.Windows.Forms.Label();
             this.clearButton = new System.Windows.Forms.Button();
             this.CharGenTab = new System.Windows.Forms.TabPage();
-            this.MysteryTab = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.characterButton = new System.Windows.Forms.Button();
+            this.characterDisplay = new System.Windows.Forms.Label();
+            this.MysteryTab = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.mysteryMessageButton = new System.Windows.Forms.Button();
+            this.mysteryMessageDisplay = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.RollDiceTab.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -65,14 +69,16 @@
             this.flowLayoutPanel3.SuspendLayout();
             this.CharGenTab.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.MysteryTab.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.tabControl1.Controls.Add(this.RollDiceTab);
             this.tabControl1.Controls.Add(this.CharGenTab);
             this.tabControl1.Controls.Add(this.MysteryTab);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -205,11 +211,11 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(293, 20);
+            this.label1.Location = new System.Drawing.Point(286, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 31);
+            this.label1.Size = new System.Drawing.Size(214, 31);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Roll some die!";
+            this.label1.Text = "Roll some dice!";
             // 
             // flowLayoutPanel2
             // 
@@ -369,20 +375,12 @@
             this.CharGenTab.Text = "Character Idea Generator";
             this.CharGenTab.UseVisualStyleBackColor = true;
             // 
-            // MysteryTab
-            // 
-            this.MysteryTab.Location = new System.Drawing.Point(4, 22);
-            this.MysteryTab.Name = "MysteryTab";
-            this.MysteryTab.Size = new System.Drawing.Size(792, 424);
-            this.MysteryTab.TabIndex = 2;
-            this.MysteryTab.Text = "Mystery Message";
-            this.MysteryTab.UseVisualStyleBackColor = true;
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.characterButton, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.characterDisplay, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -402,6 +400,65 @@
             this.characterButton.TabIndex = 0;
             this.characterButton.Text = "Give me a character idea!";
             this.characterButton.UseVisualStyleBackColor = true;
+            this.characterButton.Click += new System.EventHandler(this.characterButton_Click);
+            // 
+            // characterDisplay
+            // 
+            this.characterDisplay.AutoSize = true;
+            this.characterDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.characterDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.characterDisplay.Location = new System.Drawing.Point(3, 139);
+            this.characterDisplay.Name = "characterDisplay";
+            this.characterDisplay.Size = new System.Drawing.Size(780, 279);
+            this.characterDisplay.TabIndex = 1;
+            this.characterDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // MysteryTab
+            // 
+            this.MysteryTab.Controls.Add(this.tableLayoutPanel3);
+            this.MysteryTab.Location = new System.Drawing.Point(4, 22);
+            this.MysteryTab.Name = "MysteryTab";
+            this.MysteryTab.Size = new System.Drawing.Size(792, 424);
+            this.MysteryTab.TabIndex = 2;
+            this.MysteryTab.Text = "Mystery Message";
+            this.MysteryTab.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.AutoSize = true;
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.mysteryMessageButton, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.mysteryMessageDisplay, 0, 1);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.66666F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(792, 424);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // mysteryMessageButton
+            // 
+            this.mysteryMessageButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mysteryMessageButton.Font = new System.Drawing.Font("Segoe UI Emoji", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mysteryMessageButton.Location = new System.Drawing.Point(248, 28);
+            this.mysteryMessageButton.Name = "mysteryMessageButton";
+            this.mysteryMessageButton.Size = new System.Drawing.Size(296, 85);
+            this.mysteryMessageButton.TabIndex = 0;
+            this.mysteryMessageButton.Text = "Give me a message...";
+            this.mysteryMessageButton.UseVisualStyleBackColor = true;
+            // 
+            // mysteryMessageDisplay
+            // 
+            this.mysteryMessageDisplay.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mysteryMessageDisplay.AutoSize = true;
+            this.mysteryMessageDisplay.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mysteryMessageDisplay.Location = new System.Drawing.Point(396, 270);
+            this.mysteryMessageDisplay.Name = "mysteryMessageDisplay";
+            this.mysteryMessageDisplay.Size = new System.Drawing.Size(0, 25);
+            this.mysteryMessageDisplay.TabIndex = 1;
             // 
             // Form1
             // 
@@ -423,6 +480,11 @@
             this.flowLayoutPanel3.PerformLayout();
             this.CharGenTab.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.MysteryTab.ResumeLayout(false);
+            this.MysteryTab.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -458,6 +520,10 @@
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button characterButton;
+        private System.Windows.Forms.Label characterDisplay;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button mysteryMessageButton;
+        private System.Windows.Forms.Label mysteryMessageDisplay;
     }
 }
 
