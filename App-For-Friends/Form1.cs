@@ -15,12 +15,15 @@ namespace App_For_Friends
         public NumberContainer NumContainer { get; set; }
         public string[] characterRace = { "Dragonborn", "Dwarf", "Half-elf", "Elf", "Human", "Halfling", "Gnome", "Tiefling", "Half-orc" };
         public string[] characterClass = { "Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard" };
+        public string[] mysteryMessages = { "I've never beem strealing", "Just beanin'", "Sorry! We're not working today.", "My name is Wee Pee and I'm here to say, I love big ham in a major way." };
+        public Random rand;
 
         public Form1()
         {
             InitializeComponent();
 
             NumContainer = new NumberContainer { Sum = 0 , DFourRolled = 0, DSixRolled = 0, DEightRolled = 0, DTenRolled = 0, DTwelveRolled = 0, DTwentyRolled = 0, DPercentileRolled = 0};
+            rand = new Random();
         }
 
         private void d4button_Click(object sender, EventArgs e)
@@ -162,15 +165,18 @@ namespace App_For_Friends
         private void characterButton_Click(object sender, EventArgs e)
         {
             // roll a random character and display on characterDisplay.Text
-
-            Random rand = new Random();
-
             int raceIndex = rand.Next(characterRace.Length);
             int classIndex = rand.Next(characterClass.Length);
 
             string randomCharacter = characterRace[raceIndex] + " " + characterClass[classIndex];
 
             characterDisplay.Text = randomCharacter;
+        }
+
+        private void mysteryMessageButton_Click(object sender, EventArgs e)
+        {
+            int messageIndex = rand.Next(mysteryMessages.Length);
+            mysteryMessageDisplay.Text = mysteryMessages[messageIndex];
         }
     }
 
